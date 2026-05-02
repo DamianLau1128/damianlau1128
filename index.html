@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lau Cheuk Hin Damian's Web Page</title>    
+<style>
+    body{background-image: url(Background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    button{
+        color:white;
+        background-color:rgb(112, 112, 112);
+        width: 60px;
+        height: 35px;
+        border-radius: 18px;
+        border-style: none;
+        cursor: pointer;
+        }
+    button:hover{
+        background-color: rgb(139, 139, 139);
+    }
+    button:active{
+        background-color: lightgrey;
+    }
+    .discover{
+         background-color:rgb(112, 112, 112);
+    }
+        .discover:hover{
+            background-color: rgb(139, 139, 139);
+        }
+        .discover:active{
+            background-color: lightgrey;
+        }
+    .unimath{
+        background-color: lightblue;
+    }
+        .unimath:hover{
+            background-color: rgb(188, 225, 237);
+        }
+        .unimath:active{
+            background-color: rgb(220, 240, 250);
+        }
+    .unibio{
+        background-color:lightpink;
+    }
+        .unibio:hover{
+            background-color: rgb(255, 204, 229);
+        }
+        .unibio:active{
+            background-color: rgb(255, 230, 240);
+        }
+    .core{
+        background-color: rgb(174 280 128);
+    }
+        .core:hover{
+            background-color: rgb(204, 255, 204);
+        }
+        .core:active{
+            background-color: rgb(230, 255, 230);
+        }
+    .m2{
+        background-color: rgb(213, 171, 235);
+    }
+        .m2:hover{
+            background-color: rgb(235, 204, 255);
+        }
+        .m2:active{
+            background-color: rgb(240, 230, 255);
+        }
+    .music{
+        background-color: rgb(238, 230, 123);
+    }
+        .music:hover{
+            background-color: rgb(255, 240, 153);
+        }
+        .music:active{
+            background-color: rgb(255, 245, 180);
+        }
+    .contact{
+        background-color: rgb(241, 176, 107);
+    }
+        .contact:hover{
+            background-color: rgb(255, 204, 153);
+        }
+        .contact:active{
+            background-color: rgb(255, 230, 180);
+        }
+    .programming{
+        background-color: rgb(153, 185, 255);
+    }
+        .programming:hover{
+            background-color: rgb(204, 221, 255);
+        }
+        .programming:active{
+            background-color: rgb(230, 240, 255);
+        }
+        #title{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #subtitle1{
+            text-align: center;
+             font-family: 'Times New Roman', Times, serif;
+        }
+        #button{
+            float: right;
+            font-family: 'Times New Roman', Times, serif;
+        }
+</style>
+
+<script>
+        function searchContent() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.content-section');
+
+            sections.forEach(section => {
+                const text = section.querySelector('p').textContent.toLowerCase();
+                const buttonText = section.querySelector('button').textContent.toLowerCase();
+                if (text.includes(input) || buttonText.includes(input)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+        <!--hide
+        if (!sessionStorage.getItem('authenticated')) {
+        var password;
+        var pass1 = "Damian112805";
+        password = prompt('Please enter the password to access this page:');
+        if (password != pass1) {
+            alert('Incorrect password. You will be redirected to the homepage.');
+            document.location = 'file:///Users/damianlau/Desktop/HTML/Homepage.html';
+        } else {
+            alert('Welcome to my website!');
+            sessionStorage.setItem('authenticated', 'true');
+        }
+    }
+        //-->
+</script>
+</head>
+<body>
+    <h1 id="title">Lau Cheuk Hin Damian's Web Page</h1>
+    <h2>Welcome to my personal website.</h2>
+        <form id="Search-wrapper" class="search Todos">
+            <input type="text" id="searchInput" placeholder="Enter your search..." class="search-input" required oninput="searchContent()">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+
+    <hr/>
+    
+    <h2 id="subtitle1">Content Page</h2>
+
+    <div class="content-section">
+        <div style="text-align: center">
+            <img src="Melogo.jpeg" alt="MyPhoto" width="260" height="320">
+        </div>
+        <div>
+            <p>Discover more about me</p>
+            <button id="button" onclick="window.location.href='Portfolio.html'"class="discover">Here</button>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <img src="Mathlogo.jpeg" alt="Math logo" width="200" height="200">
+        
+        <p>HKU MATH Courses Notes
+            <button id="button" onclick="window.location.href='HKU Math Courses.html'" class="unimath">Uni Math</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="HKDSE Core.png" alt="HKDSE Core logo" width="250" height="130">
+        
+        <p>HKDSE Core Notes & Exercise
+            <button id="button" onclick="window.location.href='HKDSE Core Math.html'" class="core">DSE Core</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="HKDSE M2.png" alt="HKDSE M2 logo" width="250" height="130">
+        
+        <p>HKDSE M2 Notes & Exercise
+            <button id="button" onclick="window.location.href='HKDSE M2 Math.html'" class="m2">DSE M2</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="Biology.jpeg" alt="Biology logo" width="200" height="200">
+        
+        <p>HKU BIOLOGY Courses Notes
+            <button id="button" onclick="window.location.href='HKU Biology Course.html'" class="unibio">Uni Bio</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="Musiclogo.jpeg" alt="Music logo" width="200" height="200">
+        
+        <p>My Music Performance Video
+            <button id="button" onclick="window.location.href='My Music.html'" class="music">Music</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="Programming.jpg" alt="Programming logo" width="200" height="200">
+     
+        <p>My Programming Work
+            <button id="button" onclick="window.location.href='My Programming work.html'" class="programming">Program</button>
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="Phone.png" alt="Contact logo" width="200" height="200">
+   
+        <p>Contact Me
+            <button id="button" onclick="window.location.href='Contact.html'" class="contact">Here</button>
+        </p>
+    </div>
+
+    <hr/>
+    <p>Created on 6 August 2025</p>
+</body>
+</html>
