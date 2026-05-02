@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lau Cheuk Hin Damian's Web Page</title>
+<style>
+    body{background-image: url(Background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    #title{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button{
+        color:white;
+        background-color:rgb(112, 112, 112);
+        width: 60px;
+        height: 35px;
+        border-radius: 18px;
+        border-style: none;
+        cursor: pointer;
+        }
+        .Back{
+        background-color: lightblue;
+        }
+        .Back:hover{
+            background-color: rgb(188, 225, 237);
+        }
+        .Back:active{
+            background-color: rgb(220, 240, 250);
+        }
+        h2{
+            text-align: justify;
+            color: rgb(37, 37, 37);
+            font-size: 19px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .card-content {
+            padding: 10px;
+        }
+        .difficulty {
+            color: #34495e;
+        }
+        .stars {
+            color: #000;
+        }
+        .stars .filled {
+            color: #000000; /* Gold color for filled stars */
+        }
+        .notes {
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 50px;
+        }
+</style>
+</head>
+<body>
+    <h1 id="title">HKU MATH COURSES</h1>
+    <p>Back to the Content Page <button id="button" onclick="window.location.href='index.html'" class="Back">Back</button></p>
+    <hr/>
+    <h2>Below is a list of MATH classes I took as an HKU student.<br/>
+        The ability to read, comprehend, and ask questions is crucial to mastering mathematics effectively.<br/>
+        Yet, it is understandable that not all students taking MATH courses aspire to become mathematicians.
+        Many students seek efficient ways to deal with tests and exams. The concise lecture notes serve this purpose.<br/>
+        All the notes are actively maintained, but most of them are password-protected.<br/>
+        Hope that the lecture notes can benefit not only current and prospective students at HKU but also all math lovers worldwide!
+    </h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-header">MATH2012 Fundamental concepts of mathematics</div>
+            <div class="card-content">
+                <p class="difficulty">Difficulty: <span class="stars">&#9733&#9733&#9733&#9733&#9734&#9734&#9734&#9734&#9734&#9734</span></p>
+                <p><a href="Linear Algebra 1.pdf" class="notes" target="_blank">Notes</a></p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">MATH2101 Linear ALgebra I</div>
+            <div class="card-content">
+                <p class="difficulty">Difficulty: <span class="stars">&#9733&#9733&#9734&#9734&#9734&#9734&#9734&#9734&#9734&#9734</span></p>
+                <p><a href="Linear Algebra 1.pdf" class="notes" target="_blank">Notes</a></p>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <p>Created on 6 August 2025</p>
+</body>
+</html>
